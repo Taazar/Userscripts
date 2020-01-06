@@ -1,0 +1,6 @@
+0.1 - Works on Late Answers queue
+0.2 - Now works on all review queues
+0.3 - Doesn't beep for already answered reviews
+0.4 - Move timer to only run for reloads & add auto-update
+0.4.1 - Fix tab spacing
+0.4.2 - Add timer on beep to let page load
