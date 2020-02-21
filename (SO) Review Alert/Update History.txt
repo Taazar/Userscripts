@@ -4,3 +4,4 @@
 0.4 - Move timer to only run for reloads & add auto-update
 0.4.1 - Fix tab spacing
 0.4.2 - Add timer on beep to let page load
+0.5 - Update buttons class name to match SO
