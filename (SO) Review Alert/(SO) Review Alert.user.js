@@ -25,7 +25,7 @@ function checkReview() {
 	'use strict';
 	if (/\/review\/[a-z-]+\/\d+/.test(window.location.href)) {
 		if (document.getElementsByClassName("js-review-actions grid gs8 jc-end ff-row-wrap")[0].children.length > 1) {
-            beep();
+			beep();
 		}
 	} else {
 		setTimeout(function() {
