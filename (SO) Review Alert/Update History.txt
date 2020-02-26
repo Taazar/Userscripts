@@ -6,3 +6,4 @@
 0.4.2 - Add timer on beep to let page load
 0.5 - Update buttons class name to match SO
 0.6 - Stop page auto-refreshing when review limit is reached
+0.7 - Alert user when HTML changes become incompatible
