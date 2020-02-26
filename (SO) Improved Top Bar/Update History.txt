@@ -1,0 +1,1 @@
+1.0 - Adds the text name under each button on the top bar respectively.
