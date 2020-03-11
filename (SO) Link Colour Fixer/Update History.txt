@@ -1,0 +1,2 @@
+2.0 - Update followed link colour to red (Version number I found it at)
+3.0 - Darken removed link background colour
