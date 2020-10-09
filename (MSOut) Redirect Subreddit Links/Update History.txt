@@ -1,0 +1,1 @@
+1.0 - Redirect any subreddit links in MSOutlookit to proper reddit URLS
