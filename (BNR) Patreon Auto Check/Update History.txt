@@ -1,1 +1,2 @@
 1.0 - Allow BNR to check Patreon for permission before closing tab
+2.0 - Add check for accepting Patreon requests
