@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         (MSOut) Redirect Subreddit Links
 // @author       Taazar
-// @version      1.1
+// @version      1.2
 // @description  Redirect any follow subreddit links to proper reddit URLS
 // @namespace    https://github.com/Taazar
 // @homepage     https://github.com/Taazar/Userscripts/tree/master/(MSOut)%20Redirect%20Subreddit%20Links
