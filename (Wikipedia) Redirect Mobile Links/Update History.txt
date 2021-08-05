@@ -1,0 +1,1 @@
+1.0 - Redirect any mobile wikipedia links to proper standard wikipedia links
