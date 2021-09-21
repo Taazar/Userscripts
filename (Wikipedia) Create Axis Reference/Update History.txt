@@ -1,1 +1,2 @@
 1.0 - Generate wikipedia reference link from axis history page and copy it to clipboard
+1.1 - Add update and download URLs so the userscript will auto-update itself
