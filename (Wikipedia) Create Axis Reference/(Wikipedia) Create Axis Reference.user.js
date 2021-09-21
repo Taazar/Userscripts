@@ -1,15 +1,16 @@
 // ==UserScript==
 // @name         (Wikipedia) Create Axis Reference
 // @author       Taazar
-// @version      1.0
+// @version      1.1
 // @description  Generate wikipedia reference link and copy it to clipboard
 // @namespace    https://github.com/Taazar
+// @homepage     https://github.com/Taazar/Userscripts/tree/master/(Wikipedia)%20Create%20Axis%20Reference
+// @updateURL    https://raw.githubusercontent.com/Taazar/Userscripts/master/(Wikipedia)%20Create%20Axis%20Reference/(Wikipedia)%20Create%20Axis%20Reference.meta.js
+// @downloadURL  https://raw.githubusercontent.com/Taazar/Userscripts/master/(Wikipedia)%20Create%20Axis%20Reference/(Wikipedia)%20Create%20Axis%20Reference.user.js
 // @match        https://www.axishistory.com/list-all-categories/*
 // @icon         https://www.google.com/s2/favicons?domain=wikipedia.org
 // @grant        GM_setClipboard
 // ==/UserScript==
-
-//1.0 - Generate wikipedia reference link from axis history page and copy it to clipboard
 
 (function() {
     'use strict';
