@@ -1,2 +1,3 @@
 0.1 - Initial Creation
 0.2 - Auto submits key to steam if it passes a Regex test
+0.3 - Add icon
