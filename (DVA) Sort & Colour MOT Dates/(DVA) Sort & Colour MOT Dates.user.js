@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name         (DVA) Sort & Colour MOT Dates
 // @author       Mesidast
-// @version      0.9
+// @version      1.0
 // @description  Sort and colour code DVA MOT available dates list
 // @namespace    https://github.com/Taazar
-// @homepage
-// @updateURL
-// @downloadURL
+// @homepage     https://github.com/Taazar/Userscripts/tree/master/(DVA)%20Sort%20%26%20Colour%20MOT%20Dates
+// @updateURL    https://raw.githubusercontent.com/Taazar/Userscripts/master/(DVA)%20Sort%20%26%20Colour%20MOT%20Dates/(DVA)%20Sort%20%26%20Colour%20MOT%20Dates.meta.js
+// @downloadURL  https://raw.githubusercontent.com/Taazar/Userscripts/master/(DVA)%20Sort%20%26%20Colour%20MOT%20Dates/(DVA)%20Sort%20%26%20Colour%20MOT%20Dates.user.js
 // @match        https://dva-bookings.nidirect.gov.uk/BookVehicle/Appointment
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=nidirect.gov.uk
 // @grant        none
