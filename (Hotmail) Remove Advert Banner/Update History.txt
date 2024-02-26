@@ -1,1 +1,0 @@
-1.0 - Removes the advert banner to the right of the mailbox
