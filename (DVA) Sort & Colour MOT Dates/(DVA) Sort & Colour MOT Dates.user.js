@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         (DVA) Sort & Colour MOT Dates
 // @author       Mesidast
-// @version      1.1
+// @version      1.2
 // @description  Sort and colour code DVA MOT available dates list
 // @namespace    https://github.com/Taazar
 // @homepage     https://github.com/Taazar/Userscripts/tree/master/(DVA)%20Sort%20%26%20Colour%20MOT%20Dates
@@ -32,9 +32,9 @@ window.onload = function () {
 			resultArray.push([Date.parse(nextDate), i]);
 
 			//Colour code
-			if (Date.parse(nextDate) > expiryDate) {
+			if (Date.parse(nextDate) >= expiryDate) {
 				dropDowns[i].innerHTML = '<span style="background-color:red;color:white">' + nextDate + '</span>';
-			} else if (Date.parse(dropDowns[i].innerText) <= expiryDate) {
+			} else if (Date.parse(dropDowns[i].innerText) < expiryDate) {
 				dropDowns[i].innerHTML = '<span style="background-color:green;color:white">' + nextDate + '</span>';
 				results = results + "\n" + dropDowns[i].parentElement.innerText + " : " + nextDate;
 			}
