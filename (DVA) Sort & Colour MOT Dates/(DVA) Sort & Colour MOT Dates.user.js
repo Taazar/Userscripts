@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         (DVA) Sort & Colour MOT Dates
 // @author       Mesidast
-// @version      1.0
+// @version      1.1
 // @description  Sort and colour code DVA MOT available dates list
 // @namespace    https://github.com/Taazar
 // @homepage     https://github.com/Taazar/Userscripts/tree/master/(DVA)%20Sort%20%26%20Colour%20MOT%20Dates
@@ -47,6 +47,9 @@ window.onload = function () {
 				}
 				return a[0] - b[0] || isNaN(a[0]) - isNaN(b[0]);
 			});
+			//remove any previous outputs
+			$(".sticky-footer").contents(".optgroup-1").remove();
+			//add new sorted output to bottom of page
 			var container = document.getElementsByClassName("dropdown-menu inner ")[0];
 			var freeSpace = document.getElementsByClassName("pb-3")[0];
 			for (var j = resultArray.length - 1; j >= 0; j--) {
