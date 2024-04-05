@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         (DVA) Sort & Colour MOT Dates
 // @author       Mesidast
-// @version      1.2
+// @version      1.2.1
 // @description  Sort and colour code DVA MOT available dates list
 // @namespace    https://github.com/Taazar
 // @homepage     https://github.com/Taazar/Userscripts/tree/master/(DVA)%20Sort%20%26%20Colour%20MOT%20Dates
