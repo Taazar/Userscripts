@@ -26,7 +26,6 @@ window.onload = function () {
 		const expiryDate = Date.parse(expiryDateDMY[2] + "-" + expiryDateDMY[1] + "-" + expiryDateDMY[3]);
 
 		const dropDowns = document.getElementById("bs-select-1").getElementsByClassName("text-muted");
-		var results = "";
 		var resultArray = [];
 		var anyValidDates = false;
 
@@ -41,7 +40,6 @@ window.onload = function () {
 				dropDowns[i].innerHTML = '<span style="background-color:red;color:white">' + nextDate + '</span>';
 			} else if (Date.parse(dropDowns[i].innerText) < expiryDate) { //Before or on expiry date
 				dropDowns[i].innerHTML = '<span style="background-color:green;color:white">' + nextDate + '</span>';
-				results = results + "\n" + dropDowns[i].parentElement.innerText + " : " + nextDate;
 				anyValidDates = true;
 			}
 		}
