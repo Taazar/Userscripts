@@ -22,15 +22,15 @@ window.onload = function () {
 	const dropClick = document.getElementsByClassName("btn dropdown-toggle btn-default bs-placeholder")[0];
 	dropClick.onclick = function () {
 		const expiryText = document.getElementById("certExpiryNotice").getElementsByClassName("info-notice")[0].innerText;
-		const expiryDateDMY = /(\d{2})\/(\d{2})\/(\d{4})/.exec(expiryText);
-		const expiryDate = Date.parse(expiryDateDMY[2] + "-" + expiryDateDMY[1] + "-" + expiryDateDMY[3]);
+		const expiryDateDMY = /(\d{2})\/(\d{2})\/(\d{4})/.exec(expiryText); //split dmy date into parts
+		const expiryDate = Date.parse(expiryDateDMY[2] + "-" + expiryDateDMY[1] + "-" + expiryDateDMY[3]); //rebuild as mdy and dateparse
 
 		const dropDowns = document.getElementById("bs-select-1").getElementsByClassName("text-muted");
 		var resultArray = [];
 		var anyValidDates = false;
 
 		for (var i = 0; i < dropDowns.length; i++) {
-			var nextDate = dropDowns[i].innerText;
+			var nextDate = dropDowns[i].innerText; //mdy convert not needed, implicit from dd mmm yyyy
 			//Pre-Sort (collect and add IDs to fields for later)
 			dropDowns[i].parentElement.parentElement.parentElement.id = "Sorter" + i;
 			resultArray.push([Date.parse(nextDate), i]);
