@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         (DVA) Sort & Colour MOT Dates
 // @author       Mesidast
-// @version      1.2.1
+// @version      1.3
 // @description  Sort and colour code DVA MOT available dates list
 // @namespace    https://github.com/Taazar
 // @homepage     https://github.com/Taazar/Userscripts/tree/master/(DVA)%20Sort%20%26%20Colour%20MOT%20Dates
@@ -16,9 +16,11 @@
 'use strict';
 const reloadOnNone = true;
 const reloadOnInvalidDates = true;
+const matchOnlySpecificDate = false;
+const specificDate = Date.parse("24 May 2024");
 
 window.onload = function () {
-	//Get choose combo box
+	//Get dropdown combo box
 	const dropClick = document.getElementsByClassName("btn dropdown-toggle btn-default bs-placeholder")[0];
 	dropClick.onclick = function () {
 		const expiryText = document.getElementById("certExpiryNotice").getElementsByClassName("info-notice")[0].innerText;
@@ -36,14 +38,23 @@ window.onload = function () {
 			resultArray.push([Date.parse(nextDate), i]);
 
 			//Colour code
-			if (Date.parse(nextDate) >= expiryDate) { //After expiry date
-				dropDowns[i].innerHTML = '<span style="background-color:red;color:white">' + nextDate + '</span>';
-			} else if (Date.parse(dropDowns[i].innerText) < expiryDate) { //Before or on expiry date
-				dropDowns[i].innerHTML = '<span style="background-color:green;color:white">' + nextDate + '</span>';
-				anyValidDates = true;
+			if (matchOnlySpecificDate) {
+				if (Date.parse(nextDate) == specificDate) { //Matches specific date
+					dropDowns[i].innerHTML = '<span style="background-color:green;color:white">' + nextDate + '</span>';
+					anyValidDates = true;
+				} else if (!isNaN(Date.parse(nextDate))) { //If not (not a number/date) / If valid date
+					dropDowns[i].innerHTML = '<span style="background-color:red;color:white">' + nextDate + '</span>';
+				}
+			} else {
+				if (Date.parse(nextDate) >= expiryDate) { //After expiry date
+					dropDowns[i].innerHTML = '<span style="background-color:red;color:white">' + nextDate + '</span>';
+				} else if (Date.parse(nextDate) < expiryDate) { //Before or on expiry date
+					dropDowns[i].innerHTML = '<span style="background-color:green;color:white">' + nextDate + '</span>';
+					anyValidDates = true;
+				}
 			}
 		}
-		setTimeout(() => {
+		setTimeout(() => { //
 			//Sort (actual)
 			resultArray = resultArray.sort(function (a, b) {
 				if (a[0] == b[0]) {
@@ -53,7 +64,7 @@ window.onload = function () {
 			});
 
 			//remove any previous outputs
-			$(".SortedList").remove();
+			$("#SortedList").remove();
 
 			//add new sorted output to bottom of page
 			var newDiv = document.createElement("div");
@@ -64,7 +75,7 @@ window.onload = function () {
 			}
 			document.getElementsByClassName("pb-3")[0].after(newDiv);
 
-			//if all "None Available" then refresh page
+			//if all "None Available" or "Invalid Dates" then refresh page
 			if (
 				(reloadOnNone && newDiv.firstChild.getElementsByClassName("text-muted")[0].innerText === "None Available")
 				|| (reloadOnInvalidDates && !anyValidDates)
