@@ -4,3 +4,4 @@
 	- Add auto page refresh if no dates available before expiry
 1.2.1 - Remove old remnants & improve commenting
 1.3 - Add setting for targeting a specific date instead of expiry date
+1.3.1 - Add randomiser to page refresh timer

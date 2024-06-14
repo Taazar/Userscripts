@@ -82,7 +82,7 @@ window.onload = function () {
 			) {
 				setTimeout(() => {
 					location.reload();
-				}, 10000);
+				}, (Math.floor(Math.random() * 10000) + 5000));
 			}
 		}, 500);
 	}
